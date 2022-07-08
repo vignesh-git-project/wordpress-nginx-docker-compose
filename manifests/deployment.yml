@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: vigneshgitprojectwordpressnginxdockercompose 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vigneshgitprojectwordpressnginxdockercompose
+  template:
+    metadata:
+      labels:
+        app: vigneshgitprojectwordpressnginxdockercompose 
+    spec:
+      containers:
+        - name: vigneshgitprojectwordpressnginxdockercompose 
+          image: crvigneshchandra.azurecr.io/vigneshgitprojectwordpressnginxdockercompose
+          ports:
+          - containerPort: 80
